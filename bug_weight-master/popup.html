@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Bug weight</title>
+    <link href="style.css" rel="stylesheet">
+</head>
+
+<body>
+    <!--контейнер, содержащий название, логотип и номер версии-->
+    <div class="modal-header">
+        <h1 class="logo">
+            <img class="logo-icon" src="BugWeight.png" alt="Bug Weight">
+
+        </h1>
+    </div>
+
+    <form name="formCalc">
+
+        <h2>Mass</h2>
+        <select id="mass" data-action="calculate">
+            <option value= 1>Single bug</option>
+            <option value= 2>Affects a group of users</option>
+            <option value= 3>Affects most users</option>
+        </select>
+
+        <h2>Blocking</h2>
+        <select id="block" data-action="calculate">
+            <option value= 1>Not blocking</option>
+            <option value= 2>It's blocking, but there's a workaround.</option>
+            <option value= 3>Blocking</option>
+        </select>
+
+        <h2>Critical</h2>
+        <select id="critical" data-action="calculate">
+            <option value= 1>Normal</option>
+            <option value= 3>Critical</option>
+        </select>
+    </form>
+    <div id="total" data-action="copyElement">1</div>
+    <p id="copyText">Click to Copy</p>
+
+    <script src="popup.js"></script>
+</body>
+
+</html>
